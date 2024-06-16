@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40"
+ xmlns:eib="http://ns.cardinal.hu/eib"
+ xmlns:camt="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>5520</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial CE" x:CharSet="238"/>
+   <Interior/>
+   <NumberFormat ss:Format="#\ ##0.00"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="yyyy\.mm\.dd;@"/>
+  </Style>
+  <Style ss:ID="s66">
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Számlatörténet">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="36" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="13.2">
+   <Column ss:Width="130.19999999999999"/>
+   <Column ss:Width="109.8"/>
+   <Column ss:Width="60"/>
+   <Column ss:Width="19.8"/>
+   <Column ss:Width="79.800000000000011"/>
+   <Column ss:StyleID="s66" ss:Width="150"/>
+   <Column ss:Width="229.8"/>
+   <Column ss:Width="199.79999999999998" ss:Span="1"/>
+   <Column ss:Index="10" ss:Width="333.6"/>
+   <Column ss:Width="199.79999999999998" ss:Span="1"/>
+   <Row>
+    <Cell><Data ss:Type="String">Számlaszám</Data></Cell>
+    <Cell><Data ss:Type="String">Összeg</Data></Cell>
+    <Cell><Data ss:Type="String">Devizanem</Data></Cell>
+    <Cell><Data ss:Type="String">Terhelés vagy jóváírás (T/J)</Data></Cell>
+    <Cell><Data ss:Type="String">Értéknap</Data></Cell>
+    <Cell><Data ss:Type="String">Tranzakcióazonosító</Data></Cell>
+    <Cell><Data ss:Type="String">Tranzakció típusa</Data></Cell>
+    <Cell><Data ss:Type="String">Megbízó neve</Data></Cell>
+    <Cell><Data ss:Type="String">Megbízó számlaszáma</Data></Cell>
+    <Cell><Data ss:Type="String">Kedvezményezett neve</Data></Cell>
+    <Cell><Data ss:Type="String">Kedvezményezett számlaszáma / Másodlagos azonosító</Data></Cell>
+    <Cell><Data ss:Type="String">Közlemény</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-7.7457516265206872</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032100</Data></Cell>
+    <Cell><Data ss:Type="String">Csop. beszedés teljesítés díja terheles</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-3.9423507844868957</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032101</Data></Cell>
+    <Cell><Data ss:Type="String">Kamatjövedelem SZOCHO-ja</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">SZOCHO levonás</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-5.3598790815682662</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032102</Data></Cell>
+    <Cell><Data ss:Type="String">Kamatadó terhelés</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Kamatadó levonás</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">32.748189676086859</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">J</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032103</Data></Cell>
+    <Cell><Data ss:Type="String">Ref.kamathoz kötött kamat jovairas</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Kamatelszámolás</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-3816.6685946867096</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032104</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *NETFLIX COM  COM      4312432143 43214321432     NL</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-25364.598702729116</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-30T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032105</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *SHEIN COM  M        123412342 1234214324     IR</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-6733.5830622547155</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-29T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032106</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">LEVI SZE'KFU VIRA'G  A'G      21432141 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-5420.8875233244298</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-29T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032107</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Bartok23 Gasztro Kft.   Kft.    425626 ISASZEG</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-2281.4574823345215</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-26T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032108</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">VINTED 4298456  8        2109001 Vilnius         LT</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-13751.925167142976</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-26T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032109</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">NEW YORKER BP OLLEY  LEE      2109003 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-796.77020964093947</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-26T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032110</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">LIPO'TI PE'KSE'G E'S K   E'S K   42945664 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-28985.374461631589</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-25T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032111</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">DM 233.SZ.           12596 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-7424.860400043478</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-17T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032112</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">MVM NEXT ENERGIAK  K        4264256 ISASZEG</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-5060.2399504786517</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-16T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032113</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">BARION*PHONE COSZMLA  LA       4256426 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-10250.658286753487</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-15T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032114</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Cafe EILER Kft.           4622564 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-1116.117347409064</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-15T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032115</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *SKYSHOWTIME B3  IME B3   5132323131 246525642     NL</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-6298.3912542958433</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-15T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032116</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *SHEIN COM  M        4614266 353446461     IR</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-859.34437772287276</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-15T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032117</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PROCONSERV KFT.           645645656 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-4588.0716166503653</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-15T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032118</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">BARTO'K GYO'GYSZERTA'R  ERTA'R   26556456 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-35241.138129012899</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-12T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032119</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">WOLFKITCHEN MartonvÂ¤s  tonvÂ¤s   2648563 MartonvÂ¤sÂ¤r     HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-16094.066900313795</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-09T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032120</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">CITYTRANSPORT ISASZEGGO VASARLA  ASARLA   265653 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****9441</Data></Cell>
+    <Cell><Data ss:Type="String">****9441</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-12089.185833807007</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-09T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032121</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *SHEIN COM  M        146156 26264562     IR</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-7966.9174096363195</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-09T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032122</Data></Cell>
+    <Cell><Data ss:Type="String">Csoportos besz.telj.felhat.alapján</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">OTP HEALTHCARE</Data></Cell>
+    <Cell><Data ss:Type="String">3213213-21453453</Data></Cell>
+    <Cell><Data ss:Type="String">Ügyfél:EP4321432155321</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">586373.21077885455</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">J</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-03T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032123</Data></Cell>
+    <Cell><Data ss:Type="String">Jóváírás: Csop átutalás (IG2)</Data></Cell>
+    <Cell><Data ss:Type="String">Employer CO</Data></Cell>
+    <Cell><Data ss:Type="String">HUXXX XXXX XXXX</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">2023.02.munkabér</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-5569.4777687209862</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-03T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032124</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">ROSSMANN 4235. SUBARU I  BARU I   2106002 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-25476.587547998686</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-03T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032125</Data></Cell>
+    <Cell><Data ss:Type="String">ATM készpénzfelvétel belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">OTP           2106003 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-5327.84000260621</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-03T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032126</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Alpha Zoo KISTARCSA  A        2106001 ISASZEG        HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-3799.0738429741477</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032127</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *NETFLIX COM  COM      12618563 1259561312     NL</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-2922.5908316079262</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032128</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">THUY NA KFT           156176223 ISASZEG</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-3393.1748786482603</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032129</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció külföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PAYPAL *SPOTIFY           875311324 8764632443     SW</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-11322.644924915754</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032130</Data></Cell>
+    <Cell><Data ss:Type="String">POS vásárlás tranzakció belföld</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">PEPCO 42143 KUNSZENT  SZENT    2110001 Kunszentmarto   HU</Data></Cell>
+    <Cell><Data ss:Type="String">****3211</Data></Cell>
+    <Cell><Data ss:Type="String">****4324</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-7.8983911701414611</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032131</Data></Cell>
+    <Cell><Data ss:Type="String">Csop. beszedés teljesítés díja terheles</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-3.4815744258069641</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032132</Data></Cell>
+    <Cell><Data ss:Type="String">Kamatjövedelem SZOCHO-ja</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">SZOCHO levonás</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">-2.398064722190087</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">T</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032133</Data></Cell>
+    <Cell><Data ss:Type="String">Kamatadó terhelés</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Kamatadó levonás</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
+    <Cell><Data ss:Type="Number">26.038799223290678</Data></Cell>
+    <Cell><Data ss:Type="String">HUF</Data></Cell>
+    <Cell><Data ss:Type="String">J</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2023-03-02T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">321032134</Data></Cell>
+    <Cell><Data ss:Type="String">Ref.kamathoz kötött kamat jovairas</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Kamatelszámolás</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveCol>10</ActiveCol>
+     <RangeSelection>C11</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
