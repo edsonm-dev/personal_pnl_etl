@@ -9,20 +9,20 @@ gc = gspread.service_account(filename=r"D:\\private\\jovedelem-service account.j
 
 def  gdrive_process(data):
 
-    transactionSheet=gc.open('Jövedelem').worksheet("Tranzakciók")
+    transactionSheet=gc.open('revenue report').worksheet("Transactions")
 
     lastrow=len(list(transactionSheet.col_values(1)))
 
     modifiedData=gdrive_expression_match(data)
 
-    modifiedData['Kategória ID']=modifiedData['Kategória ID'].fillna(0).astype(int)
-    modifiedData['Alkategória ID']=modifiedData['Alkategória ID'].fillna(0).astype(int) 
+    modifiedData['CATEGORY ID']=modifiedData['CATEGORY ID ID'].fillna(0).astype(int)
+    modifiedData['SUBCATEGORY ID']=modifiedData['SUBCATEGORY ID'].fillna(0).astype(int) 
 
 
 
     set_with_dataframe(transactionSheet,modifiedData.iloc[:, :], row=lastrow+1, include_index=False, include_column_header=False, resize=False, allow_formulas=False)
 
-    return None
+    
 
 
 
@@ -31,24 +31,24 @@ def  gdrive_process(data):
 
 def gdrive_expression_match(data):
 
-    expressions=(get_as_dataframe(gc.open('Jövedelem').worksheet("Kifejezések"))
+    expressions=(get_as_dataframe(gc.open('revenue report').worksheet("Expressions"))
                 .dropna(axis=0, how='all')
                 .dropna(axis=1,how='all'))
 
     expression_dicts=expressions.to_dict(orient="records")
     
-    data['Leírás']=data['Leírás'].astype(str)
+    data['DESCRIPTION']=data['DESCRIPTION'].astype(str)
 
     def searchexpression(desc,dicts):
 
-        filtered_list = [d for d in dicts if d['LEÍRÁS'].lower() in desc.lower()]
+        filtered_list = [d for d in dicts if d['DESCRIPTION'].lower() in desc.lower()]
     
         if len(filtered_list)==0 :
-            filtered_list.append({'Kategória ID': 0, 'Alkategória ID': 0,'LEÍRÁS': 0})
+            filtered_list.append({'CATEGORY ID': 0, 'SUBCATEGORY ID': 0,'DESCRIPTION': 0})
 
-        return pd.Series([filtered_list[0]['Kategória ID'],filtered_list[0]['Alkategória ID']])
+        return pd.Series([filtered_list[0]['CATEGORY ID'],filtered_list[0]['SUBCATEGORY ID']])
 
-    data[['Kategória ID','Alkategória ID']]=data.apply(lambda x: searchexpression(x['Leírás'],expression_dicts),axis=1)
+    data[['CATEGORY ID','SUBCATEGORY ID']]=data.apply(lambda x: searchexpression(x['DESCRIPTION'],expression_dicts),axis=1)
 
     return data
 

@@ -3,73 +3,67 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 pd.options.mode.chained_assignment = None
 
+def bank1_process(bank1file):
+
+  df=pd.read_excel(bank1file,skiprows=9)
 
 
-def cib_process(cibfile):
+  df_dij=df.loc[df["TYPE OF TRANSACTION"]=="DÍJ, KAMAT"]
+  df_utalas=df.loc[df["TYPE OF TRANSACTION"]=="ÁTUTALÁS"]
+  df_jovedelem=df.loc[(df["TYPE OF TRANSACTION"]=="JÖVEDELEM")|(df["TYPE OF TRANSACTION"]=="EGYÉB JÓVÁÍRÁS")]
+  df_egyeb=df.loc[df["TYPE OF TRANSACTION"]=="EGYÉB TERHELÉS"]
+  df_kartya=df.loc[df["TYPE OF TRANSACTION"]=="KÁRTYATRANZAKCIÓ"]
 
-  df=pd.read_excel(cibfile,skiprows=9)
-
-
-  df_dij=df.loc[df["TRANZAKCIÓTÍPUS"]=="DÍJ, KAMAT"]
-  df_utalas=df.loc[df["TRANZAKCIÓTÍPUS"]=="ÁTUTALÁS"]
-  
-  df_jovedelem=df.loc[(df["TRANZAKCIÓTÍPUS"]=="JÖVEDELEM")|(df["TRANZAKCIÓTÍPUS"]=="EGYÉB JÓVÁÍRÁS")]
-  
- 
-  df_egyeb=df.loc[df["TRANZAKCIÓTÍPUS"]=="EGYÉB TERHELÉS"]
-  df_kartya=df.loc[df["TRANZAKCIÓTÍPUS"]=="KÁRTYATRANZAKCIÓ"]
-
-  df_dij=data_cleaning_cib(df_dij) if len(df_dij)!=0 else df_dij
-  df_utalas=data_cleaning_cib(df_utalas) if len(df_utalas)!=0 else df_utalas
-  df_jovedelem=data_cleaning_cib(df_jovedelem) if len(df_jovedelem)!=0 else df_jovedelem
-  df_egyeb= data_cleaning_cib(df_egyeb) if len(df_egyeb)!=0 else df_egyeb
-  df_kartya=data_cleaning_cib(df_kartya) if len(df_kartya)!=0 else df_kartya
+  df_dij=data_cleaning_bank1(df_dij) if len(df_dij)!=0 else df_dij
+  df_utalas=data_cleaning_bank1(df_utalas) if len(df_utalas)!=0 else df_utalas
+  df_jovedelem=data_cleaning_bank1(df_jovedelem) if len(df_jovedelem)!=0 else df_jovedelem
+  df_egyeb= data_cleaning_bank1(df_egyeb) if len(df_egyeb)!=0 else df_egyeb
+  df_kartya=data_cleaning_bank1(df_kartya) if len(df_kartya)!=0 else df_kartya
 
   df=pd.concat([df_dij,df_utalas,df_jovedelem,df_egyeb,df_kartya])
 
+  df[['CATEGORY ID', 'SUBCATEGORY ID',"OWNER"]]=["","","PersonX"]
   
-  df[['Kategória ID', 'Alkategória ID',"Tulajdonos"]]=["","","Eddie"]
-  
-  df=(df[["Tulajdonos","DÁTUM",'Kategória ID', 'Alkategória ID','KÖZLEMÉNY','ÖSSZEG']]
-        .rename(columns={"KÖZLEMÉNY":"Leírás","ÖSSZEG":"Összeg"}))
+  df=df[["OWNER","DATE",'CATEGORY ID', 'SUBCATEGORY ID','DESCRIPTION','AMOUNT']]
+        
   
   return df
 
 
-def data_cleaning_cib(df):
+def data_cleaning_bank1(df):
     
-    match df["TRANZAKCIÓTÍPUS"].iloc[0]:
+    match df["TYPE OF TRANSACTION"].iloc[0]:
       case "DÍJ, KAMAT":
 
-        return (df.replace({"KÖZLEMÉNY":r'^[\w\s\\,-]+$'},{"KÖZLEMÉNY":"UTALÁSI DÍJ"},regex=True)
-                    .fillna(value={"KÖZLEMÉNY":"DÍJ, KAMAT"}))
+        return (df.replace({"DESCRIPTION":r'^[\w\s\\,-]+$'},{"DESCRIPTION":"UTALÁSI DÍJ"},regex=True)
+                    .fillna(value={"DESCRIPTION":"DÍJ, KAMAT"}))
 
       case "ÁTUTALÁS":
 
-        return (df.replace({"KÖZLEMÉNY":r'^[\d\s-]*'},{"KÖZLEMÉNY":"Utalás - "},regex=True)
-                  .replace({"KÖZLEMÉNY":r'\s'},{"KÖZLEMÉNY":" "},regex=True))
+        return (df.replace({"DESCRIPTION":r'^[\d\s-]*'},{"DESCRIPTION":"Utalás - "},regex=True)
+                  .replace({"DESCRIPTION":r'\s'},{"DESCRIPTION":" "},regex=True))
 
       case "JÖVEDELEM"|"EGYÉB JÓVÁÍRÁS":
 
-        return (df.replace({"KÖZLEMÉNY":r'^[\d\s\-]*'},{"KÖZLEMÉNY":"Munkabér - "},regex=True)
-                  .replace({"KÖZLEMÉNY":r'Partnerek\sközti\segyedi\sazonosító:\s\w+$'},{"KÖZLEMÉNY":""},regex=True)
-                  .replace({"KÖZLEMÉNY":r'\sKözlemény[\w\s:-]+$'},{"KÖZLEMÉNY":""},regex=True))
+        return (df.replace({"DESCRIPTION":r'^[\d\s\-]*'},{"DESCRIPTION":"Munkabér - "},regex=True)
+                  .replace({"DESCRIPTION":r'Partnerek\sközti\segyedi\sazonosító:\s\w+$'},{"DESCRIPTION":""},regex=True)
+                  .replace({"DESCRIPTION":r'\sKözlemény[\w\s:-]+$'},{"DESCRIPTION":""},regex=True))
 
       case "EGYÉB TERHELÉS":
 
-        return (df.replace({"KÖZLEMÉNY":r'^[\w\s:,/-]*Noszlopy Társasház[\w\s:,/-]*$'},{"KÖZLEMÉNY":"KÖZÖS KÖLTSÉG"},regex=True)
-                    .replace({"KÖZLEMÉNY":r'&&TF01'},{"KÖZLEMÉNY":"HITEL"},regex=True)
-                    .replace({"KÖZLEMÉNY":r'^\d{8}-\d{8}-*\d{0,8}\s'},{"KÖZLEMÉNY":"Utalás - "},regex=True))
+        return (df.replace({"DESCRIPTION":r'^[\w\s:,/-]*Noszlopy Társasház[\w\s:,/-]*$'},{"DESCRIPTION":"KÖZÖS KÖLTSÉG"},regex=True)
+                    .replace({"DESCRIPTION":r'&&TF01'},{"DESCRIPTION":"HITEL"},regex=True)
+                    .replace({"DESCRIPTION":r'^\d{8}-\d{8}-*\d{0,8}\s'},{"DESCRIPTION":"Utalás - "},regex=True))
 
       case "KÁRTYATRANZAKCIÓ":
         
-          return (df.replace({"KÖZLEMÉNY":r'^[\d\s:*.,/-]*(HUF|EUR)[\w\s.]+(HUF|HU|EUR)[\s\w.-]*\n'},{"KÖZLEMÉNY":""},regex=True)
-                    .replace({"KÖZLEMÉNY":r'\s([\dA-Za-z]{7,8})\s+(\d{3,})$'},{"KÖZLEMÉNY":""},regex=True)
-                    .replace({"KÖZLEMÉNY":r'[\'\"]'},{"KÖZLEMÉNY":""},regex=True))
+          return (df.replace({"DESCRIPTION":r'^[\d\s:*.,/-]*(HUF|EUR)[\w\s.]+(HUF|HU|EUR)[\s\w.-]*\n'},{"DESCRIPTION":""},regex=True)
+                    .replace({"DESCRIPTION":r'\s([\dA-Za-z]{7,8})\s+(\d{3,})$'},{"DESCRIPTION":""},regex=True)
+                    .replace({"DESCRIPTION":r'[\'\"]'},{"DESCRIPTION":""},regex=True))
 
-def granit_process(granitfile):
+def bank2_process(bank2file):
   
-  tree = ET.parse(granitfile)
+  tree = ET.parse(bank2file)
   root = tree.getroot()
   i=1
 
@@ -89,14 +83,11 @@ def granit_process(granitfile):
 
   df=pd.DataFrame(data,columns=header).iloc[1:]
 
-  #df=df[['Tranzakció típusa','Megbízó neve','Kedvezményezett neve','Közlemény']].head(13)
-  df = data_cleaning_granit(df)
+  return data_cleaning_bank2(df)
 
-  return df
-
-def data_cleaning_granit(df):
+def data_cleaning_bank2(df):
     
-    df = df[['Összeg', 'Értéknap', 'Tranzakció típusa', 'Megbízó neve', 'Kedvezményezett neve', 'Közlemény']]
+    df = df[['AMOUNT', 'DATE', 'TYPE OF TRANSACTION', 'CLIENT NAME', 'BENEFICIARY', 'COMMENT']]
     
     def classify_transaction(kedvezményezett, tranzakció_típus, megbízó, közlemény):
         if kedvezményezett is None:
@@ -117,28 +108,25 @@ def data_cleaning_granit(df):
                 return kedvezményezett
 
 
-    df["Leírás"] = df.apply(lambda row: classify_transaction(row['Kedvezményezett neve'],
-                                                           row['Tranzakció típusa'],
-                                                           row['Megbízó neve'],
-                                                          row['Közlemény']), axis=1)
+    df["DESCRIPTION"] = df.apply(lambda row: classify_transaction(row['BENEFICIARY'],
+                                                           row['TYPE OF TRANSACTION'],
+                                                           row['CLIENT NAME'],
+                                                          row['COMMENT']), axis=1)
 
-    df_kartyatranzakcio=(df[df['Tranzakció típusa'].str.contains("Bankkártyás vásárlás|POS|Kártyafoglalás")]
-                          .replace({"Leírás":r"\s{2,}"},{"Leírás":" "},regex=True) 
-                          .replace({"Leírás":r"\s\d{3,}\s.+\w{2}$"},{"Leírás":""},regex=True) 
-                          .replace({"Leírás":r"\s\d{3,}"},{"Leírás":""},regex=True)
-                          .replace({"Leírás":r"\.SZ\."},{"Leírás":""},regex=True)
-                          .replace({"Leírás":r"\s+\d+$"},{"Leírás":""},regex=True)
-                          .replace({"Leírás":r"^[\s\w]+\*"},{"Leírás":""},regex=True)
-                          .replace({"Leírás":r"[':]"},{"Leírás":""},regex=True)
+    df_kartyatranzakcio=(df[df['TYPE OF TRANSACTION'].str.contains("Bankkártyás vásárlás|POS|Kártyafoglalás")]
+                          .replace({"DESCRIPTION":r"\s{2,}"},{"DESCRIPTION":" "},regex=True) 
+                          .replace({"DESCRIPTION":r"\s\d{3,}\s.+\w{2}$"},{"DESCRIPTION":""},regex=True) 
+                          .replace({"DESCRIPTION":r"\s\d{3,}"},{"DESCRIPTION":""},regex=True)
+                          .replace({"DESCRIPTION":r"\.SZ\."},{"DESCRIPTION":""},regex=True)
+                          .replace({"DESCRIPTION":r"\s+\d+$"},{"DESCRIPTION":""},regex=True)
+                          .replace({"DESCRIPTION":r"^[\s\w]+\*"},{"DESCRIPTION":""},regex=True)
+                          .replace({"DESCRIPTION":r"[':]"},{"DESCRIPTION":""},regex=True)
                           
                           )
 
-    df=pd.concat([df[~df['Tranzakció típusa'].str.contains("Bankkártyás vásárlás|POS|Kártyafoglalás")],df_kartyatranzakcio])
+    df=pd.concat([df[~df['TYPE OF TRANSACTION'].str.contains("Bankkártyás vásárlás|POS|Kártyafoglalás")],df_kartyatranzakcio])
 
-    df[['Kategória ID', 'Alkategória ID',"Tulajdonos"]]=["","","Anett"]
+    df[['CATEGORY ID', 'SUBCATEGORY ID',"OWNER"]]=["","","PersonY"]
     
     
-    df=(df[["Tulajdonos",'Értéknap', 'Kategória ID', 'Alkategória ID', 'Leírás', 'Összeg']]
-          .rename(columns={"Értéknap":"DÁTUM"}))
-
-    return df
+    return df[["OWNER",'DATE', 'CATEGORY ID', 'SUBCATEGORY ID', 'DESCRIPTION', 'AMOUNT']]

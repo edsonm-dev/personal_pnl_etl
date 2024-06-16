@@ -37,7 +37,7 @@
    <NumberFormat/>
   </Style>
  </Styles>
- <Worksheet ss:Name="Számlatörténet">
+ <Worksheet ss:Name="History">
   <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="36" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="13.2">
    <Column ss:Width="130.19999999999999"/>
@@ -51,18 +51,18 @@
    <Column ss:Index="10" ss:Width="333.6"/>
    <Column ss:Width="199.79999999999998" ss:Span="1"/>
    <Row>
-    <Cell><Data ss:Type="String">Számlaszám</Data></Cell>
-    <Cell><Data ss:Type="String">Összeg</Data></Cell>
-    <Cell><Data ss:Type="String">Devizanem</Data></Cell>
-    <Cell><Data ss:Type="String">Terhelés vagy jóváírás (T/J)</Data></Cell>
-    <Cell><Data ss:Type="String">Értéknap</Data></Cell>
-    <Cell><Data ss:Type="String">Tranzakcióazonosító</Data></Cell>
-    <Cell><Data ss:Type="String">Tranzakció típusa</Data></Cell>
-    <Cell><Data ss:Type="String">Megbízó neve</Data></Cell>
-    <Cell><Data ss:Type="String">Megbízó számlaszáma</Data></Cell>
-    <Cell><Data ss:Type="String">Kedvezményezett neve</Data></Cell>
-    <Cell><Data ss:Type="String">Kedvezményezett számlaszáma / Másodlagos azonosító</Data></Cell>
-    <Cell><Data ss:Type="String">Közlemény</Data></Cell>
+    <Cell><Data ss:Type="String">ACCOUNT</Data></Cell>
+    <Cell><Data ss:Type="String">AMOUNT</Data></Cell>
+    <Cell><Data ss:Type="String">CURRENCY</Data></Cell>
+    <Cell><Data ss:Type="String">DEBIT OR CREDIT</Data></Cell>
+    <Cell><Data ss:Type="String">DATE</Data></Cell>
+    <Cell><Data ss:Type="String">TRANSACTION ID</Data></Cell>
+    <Cell><Data ss:Type="String">TYPE OF TRANSACTION</Data></Cell>
+    <Cell><Data ss:Type="String">CLIENT NAME</Data></Cell>
+    <Cell><Data ss:Type="String">CLIENT ACCOUNT</Data></Cell>
+    <Cell><Data ss:Type="String">BENEFICIARY</Data></Cell>
+    <Cell><Data ss:Type="String">BENEFICIARY ACCOUNT</Data></Cell>
+    <Cell><Data ss:Type="String">COMMENT</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">8877307869-8877307869       </Data></Cell>
