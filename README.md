@@ -2,9 +2,9 @@
 
 ## About the Project
 
-Purpose: Automating the process of cleaning banking transaction data, categorizing the costs and incomes and loading the transformed records to google sheets. The result is sourced by PowerBI for further analysis.
+**Purpose**: Automating the process of cleaning banking transaction data, categorizing the costs and incomes and loading the transformed records to google sheets. The result is sourced by PowerBI for further analysis.
 
- - Sources: 
+ - **Sources**: 
     - Account statement files (xls and xml) with transactions from two banks - monthly, API is not available
     - Categorization reference dataset from google sheets file for categorizing the transactions
     - Service account json file for authentication in google (not in the repository for natural reasons)
