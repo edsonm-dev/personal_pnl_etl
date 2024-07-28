@@ -1,4 +1,4 @@
-# Expense Report ETL
+# Revenue ETL
 
 ## About the Project
 
