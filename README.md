@@ -1,4 +1,4 @@
-# Revenue ETL
+# Personal Profit & Loss ETL
 
 ## About the Project
 
